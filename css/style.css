@@ -12,3 +12,29 @@ body{
     margin-top: 10px;
     text-align: center;
 }
+.info-delete {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.table-info {
+    display: flex;
+    justify-content: space-between;
+    color: rebeccapurple;
+    border: 2px solid rgb(122, 71, 71);
+    width: 94%;
+}
+
+.delete-btn {  
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: auto;
+    width: 5%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 98, 98);
+}

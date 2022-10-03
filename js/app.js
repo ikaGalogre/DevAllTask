@@ -49,19 +49,49 @@ function draw() {
     userContainer.id = ID
     
     const userInfo = document.createElement("div")
-    userInfo.textContent = `
     
-    Name: ${infoLocalStorage[ID - userContainer.id].name}
-    Surname:  ${infoLocalStorage[ID - userContainer.id].lname}
-    Address:  ${infoLocalStorage[ID - userContainer.id].adress}
-    Date of Birth:  ${infoLocalStorage[ID - userContainer.id].data}
-    gender:  ${infoLocalStorage[ID - userContainer.id].gender}
-    about: ${infoLocalStorage[ID - userContainer.id].about}
+    const userName = document.createElement("div")
+    userName.textContent = `
+    ${infoLocalStorage[ID - userContainer.id].name}
     `
+    const lname = document.createElement("div")
+    lname.textContent = `
+    
+    ${infoLocalStorage[ID - userContainer.id].lname}
+    `
+    const adress = document.createElement("div")
+    adress.textContent = `
+    ${infoLocalStorage[ID - userContainer.id].adress}
+    `
+    const data = document.createElement("div")
+    data.textContent = `
+    ${infoLocalStorage[ID - userContainer.id].data}
+    `
+    const gender = document.createElement("div")
+    gender.textContent = `
+    ${infoLocalStorage[ID - userContainer.id].gender}
+    `
+    const about = document.createElement("div")
+    about.textContent = `
+    ${infoLocalStorage[ID - userContainer.id].about}
+    `
+
+    userInfo.appendChild(userName)
+    userInfo.appendChild(lname)
+    userInfo.appendChild(adress)
+    userInfo.appendChild(data)
+    userInfo.appendChild(gender)
+    userInfo.appendChild(about)
+    
     userContainer.appendChild(userInfo)
+    
+    userInfo.classList.add('table-info')
+    userContainer.classList.add("info-delete")
+    
 
     const deleteButton = document.createElement("div")
-    deleteButton.textContent = "Delete"
+    deleteButton.textContent = "DLT"
+    deleteButton.classList.add('delete-btn')
     deleteButton.addEventListener("click", () => {
         userContainer.remove()
     })
